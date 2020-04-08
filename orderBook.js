@@ -1,4 +1,4 @@
-const isCompatible = (existingOrder, incomingOrder) => existingOrder.type !== incomingOrder.type && existingOrder.price === incomingOrder.price
+const isCompatible = (existingOrder, incomingOrder) => existingOrder.type !== incomingOrder.type && existingOrder.price >= incomingOrder.price
 
 const reconcileOrder = (existingBook, incomingOrder) => {
   for (let i = 0; i < existingBook.length; i++) {
